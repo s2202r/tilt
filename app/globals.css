@@ -117,3 +117,14 @@
 .otpEmail button,.textBtn{background:transparent;border:0;color:var(--lime);font:inherit;font-weight:900;cursor:pointer}.textBtn{display:block;margin:14px auto 0}.textBtn:disabled{opacity:.5;cursor:not-allowed}
 
 .emailPref{display:flex!important;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid #34343c;border-radius:14px;background:#0f0f13}.emailPref input{margin-top:3px;accent-color:var(--lime)}.emailPref span{display:grid;gap:4px}.emailPref b{color:#fff}.emailPref small{color:#8b8a94!important;font-weight:500!important;line-height:1.45}
+
+/* Global busy/loading states */
+.loadingOverlay{position:fixed;inset:0;z-index:9999;background:#09090bd9;backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px}
+.loadingCard{min-width:210px;background:#15151a;border:1px solid #ffffff1a;border-radius:22px;padding:24px;display:flex;align-items:center;justify-content:center;gap:14px;box-shadow:0 24px 70px #0009}
+.spinner{width:26px;height:26px;border:3px solid #ffffff24;border-top-color:var(--lime);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+button:disabled,.btn:disabled,.commitCta[aria-disabled="true"]{opacity:.55;cursor:not-allowed;pointer-events:none}
+.adminToast{position:fixed;right:22px;bottom:22px;z-index:200;background:#16161c;border:1px solid #ffffff1a;border-radius:16px;padding:14px 16px;box-shadow:0 18px 50px #0008;max-width:420px}
+.adminQrPreview,.paymentQr{display:block;width:min(320px,100%);aspect-ratio:1;object-fit:contain;background:#fff;border-radius:20px;padding:14px;margin:10px auto}
+.paymentBox{margin:22px 0;padding:20px;border:1px solid #34343c;background:#0d0d11;border-radius:20px;text-align:center}.paymentBox>span{display:block;text-align:left}.paymentBox>b{display:block;font-size:18px;margin-top:10px}.paymentBox p{color:#aaa9b2}.qrMissing{border:1px dashed #5a5a66;border-radius:16px;padding:26px;color:#aaa9b2;margin:14px 0}
+.checkoutCard select.input{appearance:auto}
