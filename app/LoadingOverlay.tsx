@@ -1,0 +1,2 @@
+"use client";
+export default function LoadingOverlay({label="Please wait…"}:{label?:string}){return <div className="loadingOverlay" role="status" aria-live="polite"><div className="loadingCard"><div className="spinner"/><b>{label}</b></div></div>}
