@@ -5,7 +5,7 @@ const sb=createClient("https://eyboryymmcpwspjxidmk.supabase.co","sb_publishable
 export const revalidate=30;
 function money(n:number){return "₹"+Math.round(n||0).toLocaleString("en-IN")}
 export default async function Home(){
- const {data}=await sb.from("drops").select("id,slug,status,products(id,brand,name,category,reference_price,image_url),drop_tiers(buyer_threshold,price)").eq("status","live").order("created_at",{ascending:false});
+ const {data}=await sb.from("drops").select("id,slug,status,ends_at,products(id,brand,name,category,reference_price,image_url),drop_tiers(buyer_threshold,price)").eq("status","live").order("created_at",{ascending:false});
  const drops=await Promise.all((data||[]).map(async(d:any,i:number)=>{const {data:s}=await sb.rpc("get_drop_public_stats",{p_drop_id:d.id});const buyers=Number(s?.[0]?.committed_count||0);const tiers=[...(d.drop_tiers||[])].sort((a:any,b:any)=>a.buyer_threshold-b.buyer_threshold);const unlocked=[...tiers].filter((t:any)=>buyers>=t.buyer_threshold).pop();const next=tiers.find((t:any)=>buyers<t.buyer_threshold);const current=Number(unlocked?.price||d.products?.reference_price||0);const pct=next?Math.min(100,Math.round((buyers/next.buyer_threshold)*100)):100;return {...d,buyers,tiers,current,next,pct,accent:["violet","lime","coral"][i%3]}}));
  return <main className="home">
 <header className="homeNav"><a className="brand" href="/">TILT<span></span></a><div className="navCenter"><a href="/drops">All drops</a><a href="#how">How it works</a><a href="/seller">For sellers</a></div><div className="navActions"><a className="navGhost" href="/login">Log in</a><a className="navPrimary" href="/dashboard">My TILTs</a></div></header>
