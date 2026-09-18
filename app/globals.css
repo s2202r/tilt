@@ -128,3 +128,6 @@ button:disabled,.btn:disabled,.commitCta[aria-disabled="true"]{opacity:.55;curso
 .adminQrPreview,.paymentQr{display:block;width:min(320px,100%);aspect-ratio:1;object-fit:contain;background:#fff;border-radius:20px;padding:14px;margin:10px auto}
 .paymentBox{margin:22px 0;padding:20px;border:1px solid #34343c;background:#0d0d11;border-radius:20px;text-align:center}.paymentBox>span{display:block;text-align:left}.paymentBox>b{display:block;font-size:18px;margin-top:10px}.paymentBox p{color:#aaa9b2}.qrMissing{border:1px dashed #5a5a66;border-radius:16px;padding:26px;color:#aaa9b2;margin:14px 0}
 .checkoutCard select.input{appearance:auto}
+
+.trustBadge{margin-top:16px;padding:14px 16px;border:1px solid #d7ff3f33;background:#d7ff3f0d;border-radius:16px;display:grid;gap:5px}.trustBadge b{color:var(--lime);font-size:13px}.trustBadge span{color:#b9b8c0;font-size:12px;line-height:1.5}
+.offerActions{display:grid;gap:8px;min-width:220px}.compactInput{margin:0!important;padding:10px 12px!important;font-size:12px!important}.geoSummary{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.geoSummary span{font-size:10px;color:#aaa9b2;background:#ffffff08;border:1px solid #ffffff0f;border-radius:999px;padding:5px 8px}.payBox small{display:block;color:#8b8a94;margin-top:4px}
