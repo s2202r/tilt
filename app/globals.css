@@ -18,3 +18,42 @@
 @media(max-width:1000px){.homeNav{grid-template-columns:1fr auto}.navCenter{display:none}.heroXL{grid-template-columns:1fr;min-height:auto;padding-top:10px}.tiltVisual{height:300px;max-width:620px;width:100%;margin:auto}.dropGrid{grid-template-columns:1fr 1fr}.sectionHead{grid-template-columns:1fr}.howRail{grid-template-columns:1fr}.sellerStrip{align-items:flex-start;flex-direction:column}.homeFooter{grid-template-columns:1fr;gap:18px}.homeFooter>div:last-child{justify-content:flex-start}}
 @media(max-width:680px){.homeNav{padding:0 18px}.navGhost{display:none}.heroXL{padding:8px 18px 12px;min-height:auto}.heroXL h1{font-size:clamp(52px,17vw,76px)}.tiltVisual{height:245px;min-width:0}.orbA{width:145px;height:145px;font-size:23px}.orbB{width:190px;height:190px;font-size:29px;top:90px}.orbC{width:165px;height:165px;font-size:26px}.tiltArrow{font-size:80px}.dropsSection,.howSection{padding:75px 18px}.dropGrid{grid-template-columns:1fr}.dropImage{height:280px}.howCard.featured{transform:none}.sectionHead h2,.howIntro h2,.sellerStrip h2{font-size:52px}.sellerStrip{padding:70px 20px}.trustRow{gap:12px}.homeFooter{padding:40px 20px}.homeFooter>div:last-child{flex-wrap:wrap}.grid,.stats{grid-template-columns:1fr}.dash{grid-template-columns:1fr}.side{display:none}}
 @media(prefers-reduced-motion:reduce){.priceOrb,.pulse,.marquee div{animation:none}}
+/* Product detail visibility fixes */
+.section .grid button.card{
+  background:#17171d;
+  color:#f7f7f2;
+  border:1px solid #34343c;
+  min-height:92px;
+  cursor:pointer;
+  transition:.2s transform,.2s border-color,.2s background,.2s box-shadow;
+}
+.section .grid button.card:hover{
+  transform:translateY(-2px);
+  border-color:#5a5a66;
+  background:#1d1d24;
+}
+.section .grid button.card b{
+  display:block;
+  font-size:22px;
+  color:#ffffff;
+}
+.section .grid button.card small{
+  color:#9d9ca6;
+  font-weight:700;
+}
+.section .grid button.card[style*="outline"]{
+  background:#23232b;
+}
+.section .grid button.card:focus-visible{
+  outline:3px solid var(--lime)!important;
+  outline-offset:2px;
+}
+.section .card p,
+.section .card label,
+.section .card small{
+  color:#bdbcc5;
+}
+.section .card label b,
+.section .card p b{
+  color:#fff;
+}
