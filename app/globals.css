@@ -115,3 +115,5 @@
 .otpInput{font-size:32px!important;font-weight:950;letter-spacing:.34em;text-align:center;padding-left:calc(15px + .34em)!important}
 .otpEmail{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;padding:12px 14px;border:1px solid #ffffff14;background:#0f0f13;border-radius:14px;color:#d0cfd6;font-size:13px}
 .otpEmail button,.textBtn{background:transparent;border:0;color:var(--lime);font:inherit;font-weight:900;cursor:pointer}.textBtn{display:block;margin:14px auto 0}.textBtn:disabled{opacity:.5;cursor:not-allowed}
+
+.emailPref{display:flex!important;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid #34343c;border-radius:14px;background:#0f0f13}.emailPref input{margin-top:3px;accent-color:var(--lime)}.emailPref span{display:grid;gap:4px}.emailPref b{color:#fff}.emailPref small{color:#8b8a94!important;font-weight:500!important;line-height:1.45}
