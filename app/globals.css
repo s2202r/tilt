@@ -93,3 +93,15 @@
 /* Product description / features / specifications */
 .productDetails{padding:0 0 50px}.detailsIntro{max-width:900px;margin-bottom:28px}.detailsIntro h2{font-size:clamp(40px,5vw,76px);line-height:.95;letter-spacing:-.055em;margin:12px 0}.detailsGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.detailCard{background:#121216;border:1px solid #ffffff12;border-radius:28px;padding:28px}.detailCard>span{font-size:10px;letter-spacing:.15em;font-weight:950;color:var(--lime)}.detailCard h3{font-size:30px;letter-spacing:-.04em;margin:10px 0 16px}.detailCard p{color:#aaa9b2;line-height:1.7;margin:0}.descriptionCard{grid-column:1 / -1;background:linear-gradient(135deg,#17171d,#101014)}.detailCard ul{margin:0;padding-left:20px;display:grid;gap:12px}.detailCard li{color:#d0cfd6;line-height:1.5}.detailCard li::marker{color:var(--lime)}.specsCard dl{margin:0}.specsCard dl>div{display:grid;grid-template-columns:minmax(120px,.7fr) 1fr;gap:20px;padding:13px 0;border-bottom:1px solid #ffffff0d}.specsCard dt{color:#7e7d87;font-size:12px}.specsCard dd{margin:0;color:#f1f0f5;font-weight:700;text-align:right}.detailEmpty{color:#777681!important}.textarea{resize:vertical;min-height:120px}
 @media(max-width:780px){.productDetails{padding:10px 14px 52px}.detailsGrid{grid-template-columns:1fr}.descriptionCard{grid-column:auto}.detailCard{padding:22px;border-radius:22px}.specsCard dl>div{grid-template-columns:1fr;gap:5px}.specsCard dd{text-align:left}}
+
+/* Keep drop card CTAs on one line */
+.cardActions{grid-template-columns:minmax(138px,1fr) minmax(150px,auto)}
+.joinBtn{white-space:nowrap;min-width:138px;justify-content:center;gap:10px;padding:0 14px}
+.shareBtn.compact{white-space:nowrap}
+@media(max-width:1180px) and (min-width:901px){
+  .cardActions{grid-template-columns:1fr}
+  .joinBtn,.shareBtn.compact{width:100%;max-width:none}
+}
+@media(max-width:900px){
+  .joinBtn{width:100%}
+}
