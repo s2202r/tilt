@@ -135,3 +135,7 @@ button:disabled,.btn:disabled,.commitCta[aria-disabled="true"]{opacity:.55;curso
 /* Deal validity countdown */
 .dropStatusStack{display:flex;align-items:flex-end;gap:8px;flex-direction:column}.dealCountdown{margin:14px 0 4px;padding:12px 14px;border:1px solid #ffffff16;background:#111116;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:14px}.dealCountdown>span{font-size:9px;font-weight:950;letter-spacing:.14em;color:#7d7c86}.countdownDigits{display:flex;gap:8px;align-items:baseline}.countdownDigits b{font-size:18px;letter-spacing:-.03em}.countdownDigits small{font-size:9px;color:#8d8c96;margin-left:2px}.dealCountdown.compact{margin:0;padding:7px 9px;border-radius:10px;gap:8px}.dealCountdown.compact>span{font-size:8px}.dealCountdown.compact .countdownDigits{gap:5px}.dealCountdown.compact .countdownDigits b{font-size:12px}.dealCountdown.compact .countdownDigits small{font-size:7px}.dealCountdown.ended{border-color:#ff6b5f44;background:#ff6b5f0c}.dealCountdown.ended b{color:var(--coral)}.productInfo>.dealCountdown{margin-top:18px}.productInfo>.dealCountdown .countdownDigits b{font-size:22px}
 @media(max-width:680px){.dropStatusStack{gap:5px}.dealCountdown.compact{padding:6px 8px}.productInfo>.dealCountdown{align-items:flex-start;flex-direction:column}}
+
+/* Card header: countdown left, LIVE right */
+.dropTop{align-items:center}
+.dropTop>.dealCountdown.compact{margin:0}
