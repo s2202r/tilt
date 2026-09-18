@@ -1,0 +1,1 @@
+export default function Page(){return <main className="legalPage"><a className="brand" href="/">TILT<span>↘</span></a><h1>About TILT</h1><p>TILT is a collective buying platform where buyers express real purchase intent and better prices can unlock as more committed buyers join.</p><p>TILT is a product of <b>BUILTFORBUSINESS LLP</b>.</p><a href="/">← Back to TILT</a></main>}
