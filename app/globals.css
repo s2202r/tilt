@@ -139,3 +139,11 @@ button:disabled,.btn:disabled,.commitCta[aria-disabled="true"]{opacity:.55;curso
 /* Card header: countdown left, LIVE right */
 .dropTop{align-items:center}
 .dropTop>.dealCountdown.compact{margin:0}
+
+/* Mobile product flow: price ladder → commitment → product details */
+@media(max-width:1000px){
+  .productActionArea>.productMainColumn{display:contents}
+  .productActionArea .priceLadderPanel{order:1}
+  .productActionArea>.commitPanel{order:2}
+  .productActionArea .productDetails{order:3}
+}
