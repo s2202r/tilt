@@ -105,3 +105,8 @@
 @media(max-width:900px){
   .joinBtn{width:100%}
 }
+
+/* Balance product card CTAs so neither overflows */
+.cardActions{grid-template-columns:minmax(0,1fr) minmax(0,.72fr);gap:10px}
+.joinBtn,.shareBtn.compact{width:100%;min-width:0;max-width:none}
+.shareBtn.compact{padding:0 12px;font-size:11px}
