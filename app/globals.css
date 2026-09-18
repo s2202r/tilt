@@ -110,3 +110,8 @@
 .cardActions{grid-template-columns:minmax(0,1fr) minmax(0,.72fr);gap:10px}
 .joinBtn,.shareBtn.compact{width:100%;min-width:0;max-width:none}
 .shareBtn.compact{padding:0 12px;font-size:11px}
+
+/* 6-digit email OTP auth */
+.otpInput{font-size:32px!important;font-weight:950;letter-spacing:.34em;text-align:center;padding-left:calc(15px + .34em)!important}
+.otpEmail{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;padding:12px 14px;border:1px solid #ffffff14;background:#0f0f13;border-radius:14px;color:#d0cfd6;font-size:13px}
+.otpEmail button,.textBtn{background:transparent;border:0;color:var(--lime);font:inherit;font-weight:900;cursor:pointer}.textBtn{display:block;margin:14px auto 0}.textBtn:disabled{opacity:.5;cursor:not-allowed}
