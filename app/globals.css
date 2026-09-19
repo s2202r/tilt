@@ -163,3 +163,6 @@ button:disabled,.btn:disabled,.commitCta[aria-disabled="true"]{opacity:.55;curso
 @media(max-width:1050px){.adminStatGrid{grid-template-columns:repeat(2,1fr)}.adminInsightGrid{grid-template-columns:1fr}}
 @media(max-width:780px){.adminLayout{grid-template-columns:1fr}.adminSidebar{position:fixed;left:0;top:0;width:min(84vw,300px);transform:translateX(-105%);transition:.22s transform}.adminSidebar.open{transform:translateX(0)}.adminClose,.adminMenuBtn{display:block}.adminBackdrop{display:block;position:fixed;inset:0;background:#000a;border:0;z-index:110}.adminTopbar{min-height:92px;padding:16px 18px}.adminContent{padding:20px 14px 60px}.adminStatGrid{grid-template-columns:1fr 1fr}.adminFormGrid{grid-template-columns:1fr}.adminPanel{padding:18px;border-radius:20px}.adminInsightGrid{grid-template-columns:1fr}}
 @media(max-width:480px){.adminStatGrid{grid-template-columns:1fr}.adminTopbar h1{font-size:34px}}
+
+.adminLogout{width:100%;margin-top:4px;background:#ff6b5f10;color:#ff8b82;border:1px solid #ff6b5f33;border-radius:10px;padding:10px 12px;text-align:left;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+.adminLogout:hover{background:#ff6b5f18;border-color:#ff6b5f66}.adminLogout:disabled{opacity:.55;cursor:not-allowed}
