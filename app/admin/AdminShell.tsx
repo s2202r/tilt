@@ -1,6 +1,7 @@
 "use client";
 import {usePathname} from "next/navigation";
 import {useState} from "react";
+import {createClient} from "@/lib/supabase";
 
 const items=[
   ["/admin","Dashboard"],
@@ -14,12 +15,13 @@ const items=[
 ];
 
 export default function AdminShell({children,title,subtitle}:{children:React.ReactNode;title:string;subtitle?:string}){
-  const path=usePathname();const[open,setOpen]=useState(false);
+  const path=usePathname();const[open,setOpen]=useState(false),[signingOut,setSigningOut]=useState(false);const s=createClient();
+  async function logout(){if(signingOut)return;setSigningOut(true);await s.auth.signOut();location.replace("/admin/login")}
   return <div className="adminLayout">
     <aside className={"adminSidebar "+(open?"open":"")}>
       <div className="adminBrandRow"><a href="/" className="adminBrand">TILT CONTROL</a><button className="adminClose" onClick={()=>setOpen(false)}>×</button></div>
       <nav className="adminMenu">{items.map(([href,label])=><a key={href} href={href} className={path===href?"active":""} onClick={()=>setOpen(false)}>{label}</a>)}</nav>
-      <div className="adminSideFoot"><span>ADMIN</span><a href="/">Back to TILT</a></div>
+      <div className="adminSideFoot"><span>ADMIN</span><a href="/">Back to TILT</a><button className="adminLogout" disabled={signingOut} onClick={logout}>{signingOut?"Signing out…":"Log out"}</button></div>
     </aside>
     {open&&<button className="adminBackdrop" aria-label="Close menu" onClick={()=>setOpen(false)}/>}
     <main className="adminMain">
